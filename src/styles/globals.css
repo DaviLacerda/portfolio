@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 body{
-    @apply bg-background text-primary;
+    @apply bg-background text-primary selection:bg-brand-hover selection:text-white;
 }

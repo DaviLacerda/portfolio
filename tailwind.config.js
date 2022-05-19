@@ -19,7 +19,7 @@ module.exports = {
                 },
                 "background":{
                     DEFAULT: "#18181B",
-                }
+                },
             },
             fontFamily: {
                 inter: ["Inter", "sans-serif"],

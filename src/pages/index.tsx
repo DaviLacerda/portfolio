@@ -8,6 +8,7 @@ const Home: NextPage = () => {
             <Head>
                 <title>Davi Lacerda | Front-End Developer</title>
             </Head>
+            <Footer />
         </>
     );
 };
