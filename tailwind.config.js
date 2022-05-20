@@ -31,6 +31,9 @@ module.exports = {
                 "secondary": colors.zinc["400"],
                 "tooltip": colors.zinc["800"],
             },
+            boxShadow: {
+                "brand": "0px 8px 24px rgba(130,87,229,0.7)",
+            },
         },
     },
     plugins: [],
