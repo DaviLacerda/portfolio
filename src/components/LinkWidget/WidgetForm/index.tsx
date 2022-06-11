@@ -61,6 +61,7 @@ export function WidgetForm() {
                     href="https://github.com/DaviLacerda"
                     className="underline underline-offset-1"
                     target="_blank"
+                    rel="noopener noreferrer"
                 >
                     Davi Lacerda
                 </a>

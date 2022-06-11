@@ -12,8 +12,14 @@ export function Footer() {
         <footer className="flex flex-col items-center justify-center bg-surface-secondary w-full h-40 p-5">
             <div className="flex flex-col items-center">
                 <span className="text-center">
-                    Developed with 🤍 by {" "}
-                    <a href="https://github.com/DaviLacerda" target="_blank" className="text-brand hover:text-brand-hover hover:underline-offset-2 hover:underline focus:text-brand-hover focus:underline-offset-2 focus:underline focus:outline-none transition-colors">Davi Lacerda
+                    Developed with 🤍 by{" "}
+                    <a
+                        href="https://github.com/DaviLacerda"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-brand hover:text-brand-hover hover:underline-offset-2 hover:underline focus:text-brand-hover focus:underline-offset-2 focus:underline focus:outline-none transition-colors"
+                    >
+                        Davi Lacerda
                     </a>
                 </span>
                 <span>Brazil | © 2022</span>
