@@ -9,7 +9,7 @@ export function Footer() {
     };
 
     return (
-        <footer className="absolute bottom-0 flex flex-col items-center justify-center bg-surface-secondary w-full h-40 p-5">
+        <footer className="flex flex-col items-center justify-center bg-surface-secondary w-full h-40 p-5">
             <div className="flex flex-col items-center">
                 <span className="text-center">
                     Developed with 🤍 by {" "}
