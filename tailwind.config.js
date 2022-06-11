@@ -2,8 +2,7 @@ const colors = require('tailwindcss/colors')
 
 module.exports = {
     content: [
-        "./src/pages/**/*.{js,ts,jsx,tsx}",
-        "./src/components/**/*.{js,ts,jsx,tsx}",
+        "./src/**/*.{js,ts,jsx,tsx}",
     ],
     theme: {
         extend: {
@@ -16,6 +15,7 @@ module.exports = {
                     "primary": colors.zinc["900"],
                     "secondary": colors.zinc["800"],
                     "secondary-hover": colors.zinc["700"],
+                    "stroke": colors.zinc["600"],
                 },
                 "background":{
                     DEFAULT: "#18181B",
@@ -34,7 +34,16 @@ module.exports = {
             boxShadow: {
                 "brand": "0px 8px 24px rgba(130,87,229,0.7)",
             },
+            maxWidth: {
+                "avatar": "27rem",
+            },
+            maxHeight: {
+                "avatar": "27rem",
+            },
         },
     },
-    plugins: [],
+    plugins: [
+        require('@tailwindcss/forms'),
+        require('tailwind-scrollbar'),
+    ],
 };
