@@ -60,7 +60,7 @@ export function LinkContent( { step, onStepRestartRequested }: LinkStepProps ) {
 
         <div className="my-4 w-full">
             <textarea
-                className="min-w-[304px] w-full min-h-[112px] text-sm placeholder-zinc-400 text-zinc-100 border-zinc-600 bg-transparent rounded-md focus:border-brand focus:ring-brand focus:ring-1 resize-none focus:outline-none scrollbar scrollbar-thumb-zinc-700 scrollbar-track-transparent scrollbar-thin"
+                className="sm:min-w-[304px] w-full min-h-[112px] text-sm placeholder-zinc-400 text-zinc-100 border-zinc-600 bg-transparent rounded-md focus:border-brand focus:ring-brand focus:ring-1 resize-none focus:outline-none scrollbar scrollbar-thumb-zinc-700 scrollbar-track-transparent scrollbar-thin"
                 placeholder="Text your message here..."
                 onChange={(event) => setComment(event.target.value.replace(/\s/g, "%20"))}
             />
@@ -72,7 +72,7 @@ export function LinkContent( { step, onStepRestartRequested }: LinkStepProps ) {
                     className="p-2 bg-brand rounded-md border-transparent flex-1 flex justify-center items-center text-sm hover:bg-brand-hover focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-surface-primary focus:ring-brand transition-colors disabled:opacity-50 disabled:hover:bg-brand"
                     onClick={handleButton}
                 >
-                    Generate link with message
+                    Send message
                 </button>
             </footer>
         </div>

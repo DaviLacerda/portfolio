@@ -22,5 +22,13 @@
 }
 
 body {
-    @apply bg-background text-primary selection:bg-brand-hover selection:text-white;
+    @apply bg-background text-primary font-play selection:bg-brand-hover 
+    selection:text-white break-words;
+}
+
+textarea,
+input,
+select,
+button {
+    @apply font-inter;
 }
