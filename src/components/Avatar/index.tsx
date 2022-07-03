@@ -1,8 +1,13 @@
-export function Avatar() {
+interface AvatarProps {
+    url: string;
+    alternativeText: string;
+}
+
+export function Avatar({ url, alternativeText }: AvatarProps) {
     return (
         <img
-            src="https://avatars.githubusercontent.com/u/83991325?v=4"
-            alt="Davi Lacerda"
+            src={url}
+            alt={alternativeText}
             className="rounded-full object-contain w-full h-full relative max-w-avatar max-h-avatar"
         />
     );

@@ -5,6 +5,8 @@ import { Footer } from "../components/Footer";
 import { WavingHand } from "../components/WavingHand";
 import { favoriteTechs } from "../utils/favoriteTechs";
 
+const avatarUrl = "https://avatars.githubusercontent.com/u/83991325?v=4";
+
 const Home: NextPage = () => {
     return (
         <>
@@ -18,7 +20,7 @@ const Home: NextPage = () => {
                         <h2>Front-End Developer</h2>
                     </div>
                     <div>
-                        <Avatar />
+                        <Avatar url={avatarUrl} alternativeText="Davi Lacerda" />
                     </div>
                 </div>
                 <div className="w-full min-h-screen p-4 flex flex-col gap-12 items-start justify-center max-w-screen-xl text-left">
