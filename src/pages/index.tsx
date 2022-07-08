@@ -1,13 +1,36 @@
-import type { NextPage } from "next";
+import { gql } from "@apollo/client";
+import type { GetStaticProps } from "next";
 import Head from "next/head";
+import { Project } from "../@types/Project";
 import { Avatar } from "../components/Avatar";
 import { Footer } from "../components/Footer";
+import { Slider } from "../components/Slider";
 import { WavingHand } from "../components/WavingHand";
+import { client } from "../lib/apollo";
 import { favoriteTechs } from "../utils/favoriteTechs";
 
 const avatarUrl = "https://avatars.githubusercontent.com/u/83991325?v=4";
 
-const Home: NextPage = () => {
+const GET_PROJECTS_QUERY = gql`
+    query{
+        projects(orderBy:name_ASC){
+            name
+            description
+            tags
+            github
+            url
+            image{
+                url
+            }
+        }
+    }
+`;
+
+interface HomeProps{
+    projects: Project[];
+}
+
+const Home = ({ projects }: HomeProps) => {
     return (
         <>
             <Head>
@@ -33,19 +56,24 @@ const Home: NextPage = () => {
                         development and his technologies.
                     </p>
                     <h2 className="text-5xl">My favorite technologies:</h2>
-                    <div className="w-full flex flex-row flex-wrap gap-16 justify-center">
-                        {favoriteTechs.map((tech) => (
-                            <div
-                                key={tech.name}
-                                className="flex flex-col justify-center items-center gap-7"
-                            >
-                                { tech.icon }
-                                <span className="font-bold font-fira">
-                                    {tech.name}
-                                </span>
-                            </div>
-                        ))}
+                    <div className="w-full flex justify-center">
+                        <div className="w-3/4 gap-4 grid grid-flow-row grid-cols-2 md:grid-rows-2 md:grid-cols-3">
+                            {favoriteTechs.map((tech) => (
+                                <div
+                                    key={tech.name}
+                                    className="flex flex-col justify-center items-center gap-7"
+                                >
+                                    { tech.icon }
+                                    <span className="font-bold font-fira">
+                                        {tech.name}
+                                    </span>
+                                </div>
+                            ))}
+                        </div>
                     </div>
+                </div>
+                <div className="w-full min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-background to-brand p-4">
+                    <Slider data={projects} />
                 </div>
             </div>
             <Footer />
@@ -54,3 +82,15 @@ const Home: NextPage = () => {
 };
 
 export default Home;
+
+export const getStaticProps: GetStaticProps = async (context) => {
+    const { data } = await client.query({
+        query: GET_PROJECTS_QUERY,
+    });
+
+    return {
+        props: {
+            projects: data.projects
+        },
+    };
+};

@@ -40,6 +40,30 @@ module.exports = {
             maxHeight: {
                 "avatar": "27rem",
             },
+            keyframes: {
+                "fade-to-t": {
+                    "0%": {
+                        opacity: 0,
+                        transform: "translateY(100px)",
+                    },
+                    "100%": {
+                        opacity: 1,
+                        transform: "translateY(0px)",
+                    },
+                },
+                "brightess-25": {
+                    "0%": {
+                        filter: "brightness(1)",
+                    },
+                    "100%": {
+                        filter: "brightness(0.25)",
+                    },
+                },
+            },
+            animation: {
+                "fade-to-t": "fade-to-t 1s ease-in-out",
+                "brightess-25": "brightess-25 0.3s ease-in-out forwards",
+            }
         },
     },
     plugins: [

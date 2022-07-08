@@ -32,3 +32,11 @@ select,
 button {
     @apply font-inter;
 }
+
+.swiper-button-prev:after, .swiper-button-next:after {
+    @apply text-brand;
+}
+
+.swiper-pagination .swiper-pagination-bullet-active{
+    @apply bg-brand;
+}

@@ -1,0 +1,7 @@
+.container .swiper-pagination-bullet-active{
+    @apply bg-red-500;
+}
+
+.container .swiper-button-prev:after, .container  .swiper-button-next:after {
+    @apply text-brand;
+}
