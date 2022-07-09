@@ -27,7 +27,7 @@ export const links = {
     DISCORD: {
         icon: <DiscordLogo alt="Discord Logo" size={32} />,
         title: "DISCORD",
-        href: "https://discord.gg/",
+        href: "https://discordapp.com/users/272922827118870541",
     },
     GITHUB: {
         icon: <AiOutlineGithub title="Github Logo" size={32} />,

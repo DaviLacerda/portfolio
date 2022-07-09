@@ -48,13 +48,13 @@ export function Slider({ data }: SliderProps) {
                                     <div className="flex flex-col items-center justify-center gap-2 h-full">
                                         <div className="flex flex-row items-center flex-wrap gap-2">
                                             {project.tags.map((tag) => (
-                                                <span key={tag} className="flex items-center justify-center text-sm text-primary bg-brand rounded-full
+                                                <span key={tag} className="flex flex-1 items-center justify-center text-sm text-primary bg-brand rounded-full
                                                 px-4 py-2 break-normal hover:bg-brand-hover transition-colors">
                                                     {tag}
                                                 </span>
                                             ))}
                                         </div>
-                                        <div className="flex flex-row items-center gap-2">
+                                        <div className="flex flex-row items-center justify-center gap-2">
                                             <LinkWithIcon url={project.github} icon={<AiOutlineGithub />}>
                                                 Github
                                             </LinkWithIcon>
