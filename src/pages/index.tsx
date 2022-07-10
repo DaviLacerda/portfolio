@@ -51,7 +51,7 @@ const Home = ({ projects }: HomeProps) => {
                     <p className="text-3xl text-left">My name is <span className="text-brand">Davi Lacerda</span></p>
                     <p className="text-3xl">
                         I started to learn programming in March 2021, like
-                        student in Federal University of Uberlândia (UFU). Since
+                        as student in Federal University of Uberlândia (UFU). Since
                         that, i dedicated my time to learn more about Front-End
                         development and his technologies.
                     </p>
