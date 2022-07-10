@@ -43,7 +43,7 @@ const Home = ({ projects }: HomeProps) => {
                         <h2>Front-End Developer</h2>
                     </div>
                     <div>
-                        <Avatar url={avatarUrl} alternativeText="Davi Lacerda" />
+                        <Avatar url={avatarUrl} alternativeText="Davi Lacerda" primary />
                     </div>
                 </div>
                 <div className="w-full min-h-screen p-4 flex flex-col gap-12 items-start justify-center max-w-screen-xl text-left">
